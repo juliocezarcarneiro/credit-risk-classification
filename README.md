@@ -8,30 +8,28 @@ This analysis aims to assess credit risk for a peer-to-peer lending company by p
 ## Purpose of the analysis
 The purpose was to develop a machine learning model that can accurately classify loans as either healthy (likely to be repaid) or high-risk (likely to default), enabling the lending company to make more informed decisions about loan approvals.
 
-## Financial information of the data and prediction
+## Financial information of the data
 
-* Loan size
+* Loan size: Amount of the loan (in dollars)
 
-* Interest rate
+* Interest rate: Annual interest rate (%)
 
-* Borrower income
+* Borrower income: Annual income of borrower (in dollars)
 
-* Debt-to-income ratio
+* Debt-to-income ratio: Ratio of borrower's debt to income
 
-* Number of accounts
+* Number of accounts: Number of credit accounts
 
-* Derogatory marks
+* Derogatory marks: Negative marks on credit report
 
-* Total debt
+* Total debt: Borrower's total outstanding debt (in dollars)
 
-We needed to predict the loan status (0 = healthy loan, 1 = high-risk loan) based on these financial features.
+* Target Variable (loan_status):
+    * Binary classification label:
 
-## Basic information about the variables
-The target variable loan_status had the following distribution:
+        * 0: Healthy loan (will be repaid) Count: 75,036 (96.8% of dataset)
 
-0    75036 (healthy loans)
-1     2500 (high-risk loans)
-This shows a significant class imbalance with many more healthy loans than high-risk loans.
+        * 1: High-risk loan (likely to default) Count: 2,500 (3.2% of dataset)
 
 ## Stages of the machine learning process
 1. Data Preparation:
@@ -83,9 +81,9 @@ The primary method used was Logistic Regression, which is good for binary classi
 
     * Recall:
 
-        * Class 0 (healthy): 0.99
+        * Class 0 (healthy): 1.00
 
-        * Class 1 (high-risk): 0.89
+        * Class 1 (high-risk): 0.94
 
 ## Summary
 
